@@ -1,5 +1,5 @@
 version: '3'
-services: 
+services:    
     web:
         stdin_open: true
         build: 
@@ -10,3 +10,6 @@ services:
         volumes: 
             - /app/node_modules
             - .:/app
+        environment: 
+            - CHOKIDAR_USEPOLLING=true
+
